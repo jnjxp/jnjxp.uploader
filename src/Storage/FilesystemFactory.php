@@ -10,10 +10,10 @@ class FilesystemFactory
 {
     public function __invoke(ContainerInterface $container) : Filesystem
     {
-        $config = $container->get('config-uploader.storage');
+        $root = $container->get('config')['uploader']['storage']['root'] ?? null;
         return new Filesystem(
             $container->get(FileIdInterface::class),
-            $config['root']
+            $root
         );
     }
 }

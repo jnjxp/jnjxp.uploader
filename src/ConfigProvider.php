@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Jnjxp\Uploader;
 
-use Zend\Expressive\Application;
-use Phly\Expressive\ConfigFactory;
+use Mezzio\Application;
 
-/**
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- */
 class ConfigProvider
 {
     public function __invoke() : array
@@ -26,7 +22,6 @@ class ConfigProvider
                 Storage\FileIdInterface::class => Storage\FileId::class
             ],
             'factories'  => [
-                'config-uploader.storage' => ConfigFactory::class,
                 Handler\GetFile::class => Handler\GetFileFactory::class,
                 Handler\UploadFile::class => Handler\UploadFileFactory::class,
                 Handler\UploadResponderInterface::class => Handler\UploadResponderFactory::class,

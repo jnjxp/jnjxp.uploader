@@ -8,8 +8,8 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\UploadedFileInterface;
 use Jnjxp\Uploader\StorageInterface;
 use Jnjxp\Filed\FileResponderInterface;
-use Zend\Diactoros\ServerRequest;
-use Zend\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
+use Laminas\Diactoros\Response;
 
 class FilesystemTest extends TestCase
 {
