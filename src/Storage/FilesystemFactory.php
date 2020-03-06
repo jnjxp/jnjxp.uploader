@@ -12,8 +12,8 @@ class FilesystemFactory
     {
         $root = $container->get('config')['uploader']['storage']['root'] ?? null;
         return new Filesystem(
-            $container->get(FileIdInterface::class),
-            $root
+            $root,
+            $container->get(FileIdInterface::class)
         );
     }
 }
