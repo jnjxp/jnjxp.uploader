@@ -66,7 +66,7 @@ class UploadResponder implements UploadResponderInterface
         return $this->jsonResponse([
             'success' => true,
             'fileid'  => $fileid,
-            'file'    => $this->url ? ($this->url)('upload.get', ['fileid' => $fileid]) : null
+            'file'    => $this->url ? ($this->url)('uploader.get', ['fileid' => $fileid]) : null
         ]);
     }
 
