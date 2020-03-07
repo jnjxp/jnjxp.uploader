@@ -14,7 +14,7 @@ class GetFileFactory
     {
         return new GetFile(
             $container->get(StorageInterface::class),
-            $container->get(FileResponderInterface::class),
+            $container->get(FileResponderInterface::class)
         );
     }
 }
